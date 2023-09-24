@@ -22,13 +22,38 @@ body {
     
 }
 
-.equilibrium {
+.equilibrium, .overlay {
     width: 92%;
+    height: 100%;
     border-radius: 10px;
-    margin: 15px;    
+    margin: 15px; 
+    object-fit: cover;
+    position: relative;
+    display: inline-block;   
 }
 
+.img {
+    position:relative;
+    display:inline-block;
+    height: fit-content;
+}
 
+.overlay {
+    display: none;
+}
+
+.img:hover .overlay {
+    width:92%;
+    height:90%;
+    background:hsla(178, 100%, 50%, .5);
+    position:absolute;
+    top:0;
+    left:0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
 
 h3 {
     color: hsl(0, 0%, 100%);
@@ -113,6 +138,3 @@ h3:hover, #name:hover {
     cursor: pointer;
 }
 
-.equilibrium:hover {
-    cursor: pointer;
-}
